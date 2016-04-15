@@ -9,11 +9,51 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.example.noellin.lab3exercises.MainActivity"
-    tools:showIn="@layout/activity_main">
+    tools:context="com.example.noellin.lab3exercises.MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="30dp">
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="94dp"
+            android:id="@+id/num1"
+            android:layout_weight="36.01"
+            android:editable="true"
+            android:inputType="number|numberSigned"
+            android:background="#d8d3d3" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:id="@+id/sum"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="29.31"
+            android:background="#4f5bc917" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="68dp"
+            android:id="@+id/num2"
+            android:layout_weight="44.70"
+            android:inputType="number|numberSigned"
+            android:background="#cdc6c6" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add"
+            android:id="@+id/button"
+            android:layout_weight="1"
+            android:enabled="true"
+            android:longClickable="false"
+            android:onClick="buttonOnClick" />
+
+    </LinearLayout>
 </RelativeLayout>
