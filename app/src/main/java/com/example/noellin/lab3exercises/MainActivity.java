@@ -67,15 +67,15 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-/*
+
     public int sum(int num1, int num2) {
 
-        return num1 + num2;
-    } */
-    public int sub(int num1, int num2) {
         return num1 - num2;
     }
-
+/*    public int sub(int num1, int num2) {
+        return num1 - num2;
+    }
+*/
     public void buttonOnClick(View v) {
         int n1, n2, thesum;
         EditText e1 = (EditText) findViewById(R.id.num1);
@@ -84,7 +84,7 @@ public class MainActivity extends AppCompatActivity {
         n1 = Integer.parseInt(e1.getText().toString());
         n2 = Integer.parseInt(e2.getText().toString());
 
-        thesum = sub (n1, n2);
+        thesum = sum (n1, n2);
 
         t1.setText(Integer.toString(thesum));
     }
